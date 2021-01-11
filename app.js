@@ -6,10 +6,11 @@ const bodyParser = require('body-parser');
 
 //import routes
 const postRoute = require('./routes/posts');
-
+const authRoute = require('.routes/auth');
 //middleware
 app.use(bodyParser.json());
 app.use('/posts', postRoute);
+app.use('/user', authRoute);
 
 
 //mongo db connection 
