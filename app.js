@@ -5,8 +5,9 @@ require('dotenv/config');
 const bodyParser = require('body-parser');
 
 //import routes
+const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
-const authRoute = require('.routes/auth');
+
 //middleware
 app.use(bodyParser.json());
 app.use('/posts', postRoute);
