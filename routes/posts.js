@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/post');
-
+const verify = require('../middleware/token');
 //all posts
 router.get('/', async (req, res) => {
     try{
@@ -23,7 +23,7 @@ router.get('/:id', async (req,res) => {
 });
 
 //create post
-router.post('/create', async (req,res) => {
+router.post('/create', verify, async (req,res) => {
     const post = new Post({
         title: req.body.title,
         author: req.body.author,
@@ -38,7 +38,7 @@ router.post('/create', async (req,res) => {
 });
 
 //update
-router.patch('/:id', async (req,res) => {
+router.patch('/:id', verify, async (req,res) => {
     try{
         const updatePost = await Post.updateOne(
             {_id:req.params.id},
@@ -50,7 +50,7 @@ router.patch('/:id', async (req,res) => {
 });
 
 //delete
-router.delete('/:id', async (req,res) => {
+router.delete('/:id', verify, async (req,res) => {
     try{
         const removePost = await Post.remove({_id : req.params.id});
         res.json(removePost);
