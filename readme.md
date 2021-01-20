@@ -1,13 +1,13 @@
 ### Blog REST API Node.js
 **Project for stuides.** <br />
-**Aythors:** ['Paweł Szczodrowski](https://github.com/Szczoder97), ['Maricn Wiśniewski'](https://github.com/marcinwisniewski98) <br />
+**Authors:** ['Paweł Szczodrowski](https://github.com/Szczoder97), ['Maricn Wiśniewski'](https://github.com/marcinwisniewski98) <br />
 **Group S22-32** <br />
 **Theme:** Blog <br />
 #Technology: <br/>
     - Node.js  <br/>
     - Express  <br/>
     - MongoDB Atlas  <br/>
-#Architecture: <br/><br/>
+# Architecture: <br/><br/>
 
 **App Settings**<br/>
 ['App settings'](readme_img/app.png)<br/><br/>
@@ -35,7 +35,7 @@ This is our algorythm for checikng if user is logged in.<br/><br/>
 ['Post route1'](readme_img/post_route1.png)<br/>
 ['Post route2'](readme_img/post_route2.png)<br/><br/>
 
-#Usage:
+# Usage:
 (post)/user/register use it to create new user it is required to create, edit and delete posts.<br/>
  You have to give 3 arguments name, email and password in json format.<br/><br/>
 
